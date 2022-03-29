@@ -8,17 +8,15 @@ import Navbar from "./components/Navbar";
 const App = () => {
   return (
     <div>
-      <Navbar />
-      <br />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-
-        {/* //!handling error of routes */}
-        {/* //* 1. first way */}
-        {/* <Route path="*" element={<Error />} /> */}
-
-        {/* 2. second way  */}
+        <Route path="/" element={<Navbar />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Route>
+        <Route path="/admin" element={<Navbar />}>
+          <Route path="/admin" element={<Home />} />
+          <Route path="/admin/about" element={<About />} />
+        </Route>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </div>
