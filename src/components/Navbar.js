@@ -6,9 +6,17 @@ const Navbar = () => {
     <div>
       {/* <a href="/">Home</a>
       <a href="/about">About</a> */}
-      <Link to="/">Home</Link> <Link to="about">About</Link>
+      <Link to="/">Home</Link>
+      <br />
+      <Link to="about">About</Link>
+      <br />
       <Link to="about/123">About US ID</Link>
-      <Outlet />
+      <br />
+      <Link to="contact">Contact us</Link>
+      <br />
+      <div style={{ margin: "2em 1em" }}>
+        <Outlet />
+      </div>
     </div>
   );
 };
