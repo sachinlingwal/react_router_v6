@@ -6,9 +6,9 @@ const Contact = () => {
   console.log(location);
   return (
     <div>
-      Contact {location.pathname}
+      Contact path ={location.pathname}
       <br />
-      contact {location.state.name}
+      contact state value which is passed in Link == {location.state.name}
     </div>
   );
 };

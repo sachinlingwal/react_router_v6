@@ -12,7 +12,11 @@ const Navbar = () => {
       <br />
       <Link to="about/123">About US ID</Link>
       <br />
-      <Link to="contact">Contact us</Link>
+
+      {/* we can send state  */}
+      <Link to="contact" state={{ name: "ReactJs" }}>
+        Contact us
+      </Link>
       <br />
       <div style={{ margin: "2em 1em" }}>
         <Outlet />

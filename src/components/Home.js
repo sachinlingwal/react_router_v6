@@ -6,6 +6,7 @@ const Home = () => {
   return (
     <div>
       Home
+      {/* inside navigate we can pass state like this  */}
       <button
         onClick={() => navigate("contact", { state: { name: "sachin" } })}
       >
