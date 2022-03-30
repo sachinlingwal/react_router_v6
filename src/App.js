@@ -11,14 +11,16 @@ const App = () => {
     <div>
       <Routes>
         <Route path="/" element={<Navbar />}>
-          <Route path="/" element={<Home />} />
+          {/* now we will use index keyword  */}
+          {/* <Route path="/" element={<Home />} /> */}
+          <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact/*" element={<Contact />} />
           <Route path="/about/:id" element={<About />} />
         </Route>
-        <Route path="/admin" element={<Navbar />}>
-          <Route path="/admin" element={<Home />} />
-          <Route path="/admin/about" element={<About />} />
+        <Route path="admin" element={<Navbar />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
         </Route>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
